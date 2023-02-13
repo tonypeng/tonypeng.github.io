@@ -1,0 +1,124 @@
+body {
+    font-family: 'Karla', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #222;
+}
+
+a {
+    color: #779ecb;
+    text-decoration: none;
+    animation-iteration-count: 1;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#root {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    margin-top: 128px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 16px;
+}
+
+.wave {
+    cursor: default;
+    animation: waveHover 0.5s linear;
+    animation-delay: 0.75s;
+}
+
+.waveOnHover:hover {
+    animation: waveHover 0.5s linear;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 28px;
+    margin-top: 0;
+    animation-name: floatIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    backface-visibility : hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 400;
+    animation-name: floatIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.125s;
+    animation-fill-mode: both;
+    backface-visibility : hidden;
+}
+
+h2 .line {
+    margin-top: 4px;
+    line-height: 1.1;
+}
+
+h2 .line.first {
+    margin-top: 0;
+}
+
+.body {
+    animation-name: floatIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.25s;
+    animation-fill-mode: both;
+    backface-visibility : hidden;
+}
+
+.arjun {
+    animation-name: floatIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.25s;
+    animation-fill-mode: both;
+    backface-visibility : hidden;
+}
+
+.arjun img {
+    width: 200px;
+}
+
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes wave {
+    0% {transform: rotate(0deg) }
+    25% {transform: rotate(10deg) }
+    50% {transform: rotate(-10deg) }
+    75% {transform: rotate(10deg) }
+    100% {transform: rotate(-10deg) }
+}
+
+@keyframes waveHover {
+    0% {transform: rotate(0deg) }
+    25% {transform: rotate(10deg) }
+    50% {transform: rotate(-10deg) }
+    75% {transform: rotate(10deg) }
+    100% {transform: rotate(-10deg) }
+}
